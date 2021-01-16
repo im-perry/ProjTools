@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+session_start();
+
+?>
 
 <html>
     <head>
@@ -20,7 +19,13 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <?php include 'nav.php';?>
+            <?php
+                if(isset($_SESSION["loggedin"]) and $_SESSION["loggedin"] == true){
+                    include 'loggednav.php';
+                }elseif(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+                    include 'nav.php';
+                }
+            ?>
         </div>
         <div>
             <?php
@@ -31,6 +36,10 @@ and open the template in the editor.
                     include 'support.php';
                 }else if($_GET['page'] == "dealers"){
                     include 'dealers.php';
+                }else if($_GET['page'] == "login"){
+                    header("Location: login.php");
+                }else if($_GET['page'] == "register"){
+                    header("Location: register.php");
                 }
             } else {
                 include 'home.php';

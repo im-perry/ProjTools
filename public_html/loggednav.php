@@ -21,8 +21,9 @@ and open the template in the editor.
                     <li class="active"><a href="/?page=support">Support</a></li>
                 </ul>
                 <ul class="nav navbar-nav text-info" style="float: right;">
-                    <li class="active"><a href="/?page=login">Log In</a></li>
-                    <li class="active"><a href="/?page=register">Sign Up</a></li>
+                    <h5 class="navbar-nav text-info" style="margin: auto; color: white; padding-top: 17px;">
+                        Hi, <b><?php echo htmlspecialchars($_SESSION["email"]); ?></b></h5>
+                    <li class="active" style="margin-left: 20px;"><a href="logout.php">Sign Out</a></li>
                 </ul>
             </div>   
         </nav>
