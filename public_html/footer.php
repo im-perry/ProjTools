@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <footer class="page-footer font-small pers navbar-fixed-bottom">
+        <footer class="footer font-small pers">
             <div class="container">
                 <ul class="list-unstyled list-inline text-center">
                     <li class="list-inline">

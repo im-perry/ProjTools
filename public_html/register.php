@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "INSERT INTO users (firstname, lastname, email, password) VALUES (?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
-            mysqli_stmt_bind_param($stmt, "ssss", $param_lastname, $param_firstname, $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssss", $param_firstname, $param_lastname, $param_email, $param_password);
             
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT);

@@ -21,20 +21,38 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container">
-            <div class="h1">Ford Dealer in Craiova</div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?key=AIzaSyCsMMgwhEdPKJF-oQZoxJIixrV2jELy8EE&pb=!1m18!1m12!1m3!1d2855.8037199595565!2d23.843695815883187!3d44.29342527910464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4752d6662057fa47%3A0xb581310937f756cc!2sFord%20Rom%C3%A2nia!5e0!3m2!1sro!2sro!4v1607271669006!5m2!1sro!2sro" 
-                        width="800" height="600" 
-                        frameborder="1" 
-                        allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
+            <div class="nav col-md-2"  style = "overflow-x: hidden; float: right;">
+                <ul class="list-group">
+                <li><a class="list-group-item" href="#craiova">Craiova</a></li>
+                <li><a class="list-group-item" href="#tgjiu">Targu Jiu</a></li>
+                <li><a class="list-group-item" href="#slatina">Slatina</a></li>
+                <li><a class="list-group-item" href="#bucuresti">Bucuresti</a></li>
+                </ul>
             </div>
-            <div class="details">
-                <p>Email: fordcv@ford.com
-                    <br>
-                    Telephone: 0372516255
-                </p>
+            <div id="wrap" style=" padding-right: 20%;">
+                <div id="craiova"">
+                    <?php include 'dealers/craiova.php';?>
+                </div>
+                <div id="tgjiu" style="padding-top: 10%;">
+                    <?php include 'dealers/tgjiu.php';?>
+                </div>
+                <div id="slatina">
+                    <?php include 'dealers/slatina.php';?>
+                </div>
+                <div id="bucuresti">
+                    <?php include 'dealers/bucuresti.php';?>
+                </div>
+                <i onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-arrow-up" aria-hidden="true"></i>
             </div>
+
         </div>
+<script>
+/*function hide() {
+  document.getElementById().style.display = "none";
+}
+function display(panel) {
+  document.getElementById(panel).style.display = "block";
+}*/
+</script>
     </body>
 </html>
